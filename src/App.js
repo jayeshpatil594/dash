@@ -9,6 +9,8 @@ import useAuth, { AuthProvider } from './hooks/useAuth';
 import Home from './containers/Home/Home';
 import Login from './containers/Login/Login';
 import Signup from './containers/Signup/Signup';
+import { Suspense } from 'react';
+import Spinner from './components/Spinner';
 
 function AuthenticatedRoute({ roles, ...props }) {
   const { user } = useAuth();
@@ -23,25 +25,27 @@ function App() {
   return (
     <Router>
       <AuthProvider>
-        <Routes>
-          <Route
-            exact
-            path="/"
-            element={<AuthenticatedRoute>
-              <Home />
-            </AuthenticatedRoute>}
-          />
-          <Route
-            exact
-            path="/login"
-            element={<Login />}
-          />
-          <Route
-            exact
-            path="/signup"
-            element={<Signup />}
-          />
-        </Routes>
+        <Suspense fallback={<Spinner />}>
+          <Routes>
+            <Route
+              exact
+              path="/"
+              element={<AuthenticatedRoute>
+                <Home />
+              </AuthenticatedRoute>}
+            />
+            <Route
+              exact
+              path="/login"
+              element={<Login />}
+            />
+            <Route
+              exact
+              path="/signup"
+              element={<Signup />}
+            />
+          </Routes>
+        </Suspense>
       </AuthProvider>
     </Router>
   );
