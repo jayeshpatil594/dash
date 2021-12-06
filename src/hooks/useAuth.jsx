@@ -10,8 +10,8 @@ export const AuthProvider = (props) => {
     setUser({email, password});
   }, [setUser])
 
-  const signup = useCallback((email, password) => {
-    setUser({email, password});
+  const signup = useCallback((firstName, lastName, email, password) => {
+    setUser({firstName, lastName, email, password});
   },[setUser])
 
   const logout = useCallback(() => {

@@ -6,6 +6,7 @@ const CenteredDiv = styled.div`
   left: 25%;
 `;
 const FormContainer = styled.div`
+  width: 100%;
   background: white;
   border-radius: 10px;
   padding: 3rem;
@@ -16,7 +17,7 @@ const Input = styled.input`
   border-radius: 10px;
   margin-top: 3px;
   border: none;
-  width: 25rem;
+  width: 100%;
   height: 3.5rem;
 `;
 
