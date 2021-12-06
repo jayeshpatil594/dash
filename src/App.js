@@ -21,7 +21,7 @@ function AuthenticatedRoute({ roles, ...props }) {
 
 function App() {
   return (
-    <Router>
+    <Router basename="/dash">
       <AuthProvider>
         <Routes>
           <Route
