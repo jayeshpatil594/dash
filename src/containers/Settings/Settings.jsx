@@ -11,7 +11,7 @@ const Settings = () => {
             <div className="col-md-8">
               <div className="row">
                 <div className="col-md-6">
-                  <label htmlFor="email">
+                  <label htmlFor="firstname">
                     Firstname
                     <div>
                       <Input value="Charles" id="firstname" name="firstname" />
@@ -19,7 +19,7 @@ const Settings = () => {
                   </label>
                 </div>
                 <div className="col-md-6">
-                  <label htmlFor="email">
+                  <label htmlFor="lastname">
                     Lastname
                     <div>
                       <Input value="Morris" id="lastname" name="lastname" />

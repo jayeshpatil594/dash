@@ -52,9 +52,15 @@ const UserList = () => {
   return (
     <>
       <div className="row justify-content-between">
-        <div className="col-md-4"><h4 style={{ margin: '20px 0px 0px 20px' }}>User records</h4></div>
         <div className="col-md-4">
-          <SearchInput placeholder="Search in table..." onChange={onSearch} style={{ height: '2.2rem', margin: '20px 0px 0px 20px' }}/>
+          <h4 style={{ margin: "20px 0px 0px 20px" }}>User records</h4>
+        </div>
+        <div className="col-md-4">
+          <SearchInput
+            placeholder="Search in table..."
+            onChange={onSearch}
+            style={{ height: "2.2rem", margin: "20px 0px 0px 20px" }}
+          />
         </div>
       </div>
 

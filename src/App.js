@@ -13,9 +13,8 @@ import { Suspense } from "react";
 import Spinner from "./components/Spinner";
 import { ErrorBoundary } from "./components/ErrorBoundary";
 
-function AuthenticatedRoute({ roles, ...props }) {
+const AuthenticatedRoute = (props) => {
   const { user } = useAuth();
-  console.log(user);
 
   if (!user) return <Navigate to="/login" />;
 
